@@ -1,0 +1,21 @@
+[package]
+name = "evidence-collector"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0"
+attester = { git = "https://github.com/jialez0/guest-components", branch = "csv", default-features = false }
+base64 = "0.21.0"
+clap = { version = "4.0.29", features = ["derive"] }
+tokio = { version = "1.23.0", features = ["full"] }
+
+[features]
+default = ["csv", "tdx", "sgx", "snp", "cca"]
+csv = ["attester/csv-attester"]
+tdx = ["attester/tdx-attester"]
+sgx = ["attester/sgx-attester"]
+snp = ["attester/snp-attester"]
+cca = ["attester/cca-attester"]

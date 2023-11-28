@@ -1,6 +1,8 @@
 # Evidence
 
-本文介绍当前API支持的TEE类型对应的Evidence格式.
+OAAS的用户无需手动收集并组装Evidence，可直接使用[Evidence Collector Tool](../tools/evidence-collector/)收集当前运行环境TEE平台的证据（Base64编码）.
+
+本文介绍Base64编码前的Evidence内部格式，以供深度调试时参考。
 
 ## Intel TDX/SGX
 
