@@ -91,6 +91,7 @@
 | csv.policy_api_minor | 字符串 |
 | csv.vm_id | Base64编码 |
 | csv.vm_version | Base64编码 |
+| csv.serial_number | Base64编码 |
 | csv.measurement | Base64编码 |
 | csv.report_data | Base64编码 |
 
