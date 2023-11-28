@@ -42,7 +42,7 @@ Authorization: Basic <CREDENTIAL>
 | tee | 字符串 | 是 | 可以是如下值中的一个：`tdx`, `sgx`, `csv`, `snp`, `cca` | 指定了本次Attestation的TEE类型，必须是当前OAAS已经支持的TEE类型中的一种（见示例值） |
 | evidence | 字符串 | 是 | / | Base64编码的TEE平台证据，其内部格式特定于TEE类型。每种TEE类型对应的证据格式详见[evidence.md](./evidence.md). 用户可以在TEE内使用[Evidence Collector Tool](../tools/evidence-collector/)来生成这个参数的内容 |
 | runtime_data | 字符串数组 | 否 | / | 可选参数，数组项内容为Base64编码的自定义数据。若提供此参数，则此参数中所有数据的`SHA384`摘要必须作为TEE证据的report data字段镶嵌，否则会验证失败 |
-| policy_id | 字符串数组 | 否 | ["policy_1", "policy_2"] | 可选参数，用以指定本次验证所使用的策略集合，参数中所指定的每个策略的验证结果都会包含在响应返回值令牌中。若不设置此参数，则OAAS会使用默认策略 |
+| policy_ids | 字符串数组 | 否 | ["policy_1", "policy_2"] | 可选参数，用以指定本次验证所使用的策略集合，参数中所指定的每个策略的验证结果都会包含在响应返回值令牌中。若不设置此参数，则OAAS会使用默认策略 |
 
 ### 响应元素
 
